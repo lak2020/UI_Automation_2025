@@ -1,0 +1,3 @@
+Please note that I have created a self-hosted agent on my Windows machine and added it to the default agent pool due to the 'No hosted parallelism has been purchased or granted' error. I have requested a free parallelism grant from Azure, but it hasn't been granted yet. As running acceptance tests from Azure takes time, I have attached a video showing how the process of my ReadyAPI project runs in the Azure DevOps pipeline.
+Here is the link to the CI pipeline that runs the UI automated  test cases: https://dev.azure.com/emlakshitha/UI_Automation_2025/_build?definitionId=1
+Note: The self-hosted agent on my Windows machine should be started to run this.

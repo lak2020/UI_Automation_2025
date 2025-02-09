@@ -1,0 +1,47 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  name: Default
+
+steps:
+  - checkout: self
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Setup Node.js'
+
+  - script: npm install
+    displayName: 'Install Dependencies'
+
+  - script: npx playwright install --with-deps
+    displayName: 'Install Playwright Browsers'
+
+  - script: npx playwright test tests/TestCase1.spec.ts
+    displayName: 'Run TestCase1'
+
+  - script: npx playwright test tests/TestCase2.spec.ts
+    displayName: 'Run TestCase2'
+
+  - script: npx playwright test tests/TestCase3.spec.ts
+    displayName: 'Run TestCase3'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/test-results/*.xml'
+      testRunTitle: 'Playwright Test Results'
+    condition: always()
+
+  # Ensure Playwright Report Directory Exists
+  - script: |
+      if not exist playwright-report mkdir playwright-report
+    displayName: 'Ensure Playwright Report Directory Exists'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: 'playwright-report'
+      artifactName: 'Playwright Report'
+    condition: always()
