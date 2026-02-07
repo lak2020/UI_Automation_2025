@@ -82,6 +82,8 @@ To set up the project locally, follow these steps:
 To execute the tests, run the following command:
 ```bash
 npm test
+# or
+npx playwright test
 ```
 Ensure that the test environment is properly set up and that all dependencies are installed.
 
