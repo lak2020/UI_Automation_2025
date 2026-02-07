@@ -5,10 +5,6 @@ This project focuses on automating UI testing for web applications, ensuring hig
 
 ## Architecture
 
-The project follows the **Page Object Model (POM)** design pattern:
-
-## Architecture
-
 The project follows the **Page Object Model (POM)** design pattern.
 
 <img width="624" height="309" alt="image" src="https://github.com/user-attachments/assets/54752a8c-ece7-4ccf-bfd8-9e039c09a459" />
