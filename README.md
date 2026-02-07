@@ -6,8 +6,7 @@ This project focuses on automating UI testing for web applications, ensuring hig
 ## Architecture
 The architecture of the project consists of the following key components:
 - **Test Scripts**: Organized into modules for clarity and reusability.
-- **Test Framework**: Built on [Selenium/WebDriver/AnyOtherTool] for robust browser interactions.
-- **Reporting**: Integrated with [Reporting Tool] to provide detailed test reports.
+- **Test Framework**: Built on Playwright for robust browser interactions.
 
 ## Setup Instructions
 To set up the project locally, follow these steps:
