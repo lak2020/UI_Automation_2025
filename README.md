@@ -7,6 +7,23 @@ This project focuses on automating UI testing for web applications, ensuring hig
 
 The project follows the **Page Object Model (POM)** design pattern:
 
+UI_Automation_2025/
+├── playwright_project/
+│   ├── pages/                 # Page Object Model (POM) structure
+│   │   ├── BasePage.ts        # Base class for common page actions
+│   │   ├── HomePage.ts        # Interactions on the home page (search, filter, add to cart)
+│   │   ├── CartPage.ts        # Shopping cart management actions
+│   │   ├── CheckOut.ts        # Checkout process and order placement
+│   │   └── ...                # Additional page objects for modularity
+│   ├── tests/                 # Test specifications
+│   │   └── *.spec.ts          # Playwright test files
+│   ├── node_modules/          # Project dependencies
+│   ├── playwright.config.ts   # Playwright configuration file
+│   └── package.json           # Project metadata and dependency management
+├── README.md                  # Project overview and usage instructions
+└── ...                        # Other supporting files
+
+
 - **BasePage**: Foundation class providing common functionality
 - **Derived Page Objects**: Individual classes for each page, inheriting from BasePage
 - **Test Files**: Test scripts that use page objects for clear, reusable test cases
@@ -17,6 +34,7 @@ The project follows the **Page Object Model (POM)** design pattern:
 ✅ Reduced code duplication  
 ✅ Easier updates when UI changes  
 ✅ Better test organization and scalability  
+
 
 ### BasePage.ts
 Base class containing shared functionality for all page objects:
